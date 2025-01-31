@@ -176,14 +176,14 @@
     color: #ff0000;
 }
 
-a {
+.a-footer {
     text-decoration: none; /* Remove o sublinhado */
     color: #e72525b9; /* Define a cor do link (exemplo: laranja) */
-  }
+}
   
-  a:hover {
+.a-footer:hover {
     color: #ff0000; /* Muda a cor do link quando o mouse passa por cima */
-  }
+}
   
 
 /* Responsividade */
