@@ -5,19 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="shortcut icon" type="image/ico" href="/assets/img/favicon/favicon.ico"/>
-    <title>Honda Civic 2021</title>
+    <title>Jeep Compass 2022 - Motors Commerce</title>
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <a href="/index.html" class="logo">
             <img src="/assets/img/Logo - CarStore.png" alt="Logo">
-        </div>
+        </a>
         <nav class="nav-links">
-            <a href="#veiculos">Veículos</a>
-            <a href="#financiamento">Financiamento</a>
-            <a href="#contato">Contato</a>
-            <a href="#sobre">Sobre</a>
+            <a href="../index.html#veiculos">Veículos</a>
+            <a href="../index.html#financiamento">Financiamento</a>
+            <a href="../index.html#contato">Contato</a>
+            <a href="../index.html#sobre">Sobre</a>
         </nav>
     </header>
+
+    <!-- Conteúdo específico do Jeep Compass -->
+    <div class="vehicle-page">
+        <div class="vehicle-gallery">
+            <div class="main-image">
+                <img src="/assets/img/Veículos/Civic -  2021/Civic-2021-0.png" alt="Honda Civic 2021" id="mainImage">
+            </div>
+            <div class="thumbnail-grid">
+                <div class="thumbnail active" onclick="changeImage(0)">
+                    <img src="/assets/img/Veículos/Civic -  2021/Civic-2021-0.png" alt="Vista frontal">
+                </div>
+                <div class="thumbnail" onclick="changeImage(1)">
+                    <img src="/assets/img/Veículos/Civic -  2021/Civic-2021-1.png" alt="Vista traseira">
+                </div>
+                <div class="thumbnail" onclick="changeImage(2)">
+                    <img src="/assets/img/Veículos/Civic -  2021/Civic-2021-2.png" alt="Interior">
+                </div>
+                <div class="thumbnail" onclick="changeImage(3)">
+                    <img src="/assets/img/Veículos/Civic -  2021/Civic-2021-3.png" alt="Detalhes">
+                </div>
+            </div>
+        </div>
+
+        <div class="vehicle-details">
+            <h1 class="vehicle-title">Honda Civic 2021</h1>
+            <p class="vehicle-price">R$ 140.000</p>
+
+            <ul class="specs-list">
+                <li><span>Marca:</span> <span>Honda</span></li>
+                <li><span>Modelo:</span> <span>Compass Longitude</span></li>
+                <li><span>Ano:</span> <span>2022/2022</span></li>
+                <li><span>Quilometragem:</span> <span>15.000 km</span></li>
+                <li><span>Câmbio:</span> <span>Automático 9 velocidades</span></li>
+                <li><span>Combustível:</span> <span>Flex</span></li>
+                <li><span>Cor:</span> <span>Branco</span></li>
+                <li><span>Portas:</span> <span>4</span></li>
+            </ul>
+
+            <div class="contact-section">
+                <h3>Interessado neste veículo?</h3>
+                <p>Entre em contato conosco via WhatsApp</p>
+                <a href="#" class="whatsapp-button">
+                    <img src="/assets/img/favicon/WhatsApp.ico" alt="WhatsApp" width="24">
+                    Falar com Vendedor
+                </a>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <h3>Descrição</h3>
+                <p>Jeep Compass Longitude 2022, completo com teto solar panorâmico, bancos em couro, sistema de navegação, carregador wireless, conectividade Apple CarPlay/Android Auto, sensor de chuva, cruise control e garantia de fábrica.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: contato@motorscommerce.com.br</p>
+                <p>Telefone: (11) 9999-9999</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horário de Atendimento</h3>
+                <p>Seg-Sex: 09h às 18h</p>
+                <p>Sábado: 09h às 13h</p>
+            </div>
+            <div class="footer-section">
+                <h3>Endereço</h3>
+                <p>Av. Paulista, 1000</p>
+                <p>São Paulo - SP</p>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 2rem;">&copy; 2025 Desenvolvido por <a href="https://github.com/KauaZao0o" class="a-footer" target="_blank">KauaZao0o</a></p>
+    </footer>
+
+    <script>
+        function changeImage(index) {
+            const mainImg = document.getElementById('mainImage');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const images = [
+                '/assets/img/Veículos/Civic - 2021/Civic-2021-0.png',
+                '/assets/img/Veículos/Civic - 2021/Civic-2021-1.png',
+                '/assets/img/Veículos/Civic - 2021/Civic-2021-2.png',
+                '/assets/img/Veículos/Civic - 2021/Civic-2021-3.png'
+            ];
+
+            mainImg.src = images[index];
+            thumbnails.forEach((thumb, i) => {
+                thumb.classList.toggle('active', i === index);
+            });
+        }
+
+        document.addEventListener('keydown', (e) => {
+            const currentIndex = Array.from(document.querySelectorAll('.thumbnail'))
+                                    .findIndex(thumb => thumb.classList.contains('active'));
+            
+            if(e.key === 'ArrowLeft' && currentIndex > 0) {
+                changeImage(currentIndex - 1);
+            }
+            if(e.key === 'ArrowRight' && currentIndex < 3) {
+                changeImage(currentIndex + 1);
+            }
+        });
+    </script>
 </body>
 </html>
