@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" type="image/ico" href="/assets/img/favicon/favicon.ico"/>
     <title>Jeep Compass 2022 - Motors Commerce</title>
 </head>
@@ -54,7 +54,7 @@
                 <li><span>Quilometragem:</span> <span>15.000 km</span></li>
                 <li><span>Câmbio:</span> <span>Automático 9 velocidades</span></li>
                 <li><span>Combustível:</span> <span>Flex</span></li>
-                <li><span>Cor:</span> <span>Branco</span></li>
+                <li><span>Cor:</span> <span>Prata</span></li>
                 <li><span>Portas:</span> <span>4</span></li>
             </ul>
 
@@ -96,34 +96,7 @@
         <p style="text-align: center; margin-top: 2rem;">&copy; 2025 Desenvolvido por <a href="https://github.com/KauaZao0o" class="a-footer" target="_blank">KauaZao0o</a></p>
     </footer>
 
-    <script>
-        function changeImage(index) {
-            const mainImg = document.getElementById('mainImage');
-            const thumbnails = document.querySelectorAll('.thumbnail');
-            const images = [
-                '/assets/img/Veículos/Compass - 2022/Compass-2022-0.png',
-                '/assets/img/Veículos/Compass - 2022/Compass-2022-1.png',
-                '/assets/img/Veículos/Compass - 2022/Compass-2022-2.png',
-                '/assets/img/Veículos/Compass - 2022/Compass-2022-3.png'
-            ];
+    <script src="/assets/script/Compass - 2022.js"></script>
 
-            mainImg.src = images[index];
-            thumbnails.forEach((thumb, i) => {
-                thumb.classList.toggle('active', i === index);
-            });
-        }
-
-        document.addEventListener('keydown', (e) => {
-            const currentIndex = Array.from(document.querySelectorAll('.thumbnail'))
-                                    .findIndex(thumb => thumb.classList.contains('active'));
-            
-            if(e.key === 'ArrowLeft' && currentIndex > 0) {
-                changeImage(currentIndex - 1);
-            }
-            if(e.key === 'ArrowRight' && currentIndex < 3) {
-                changeImage(currentIndex + 1);
-            }
-        });
-    </script>
 </body>
 </html>

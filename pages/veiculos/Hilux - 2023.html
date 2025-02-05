@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" type="image/ico" href="../assets/img/favicon/favicon.ico"/>
     <title>Toyota Hilux 2023 - Motors Commerce</title>
 </head>
@@ -95,34 +95,7 @@
         <p style="text-align: center; margin-top: 2rem;">&copy; 2025 Desenvolvido por <a href="https://github.com/KauaZao0o" class="a-footer" target="_blank">KauaZao0o</a></p>
     </footer>
 
-    <script>
-        function changeImage(index) {
-            const mainImg = document.getElementById('mainImage');
-            const thumbnails = document.querySelectorAll('.thumbnail');
-            const images = [
-                '/assets/img/Veículos/Hilux - 2023/Hilux-2023-0.png',
-                '/assets/img/Veículos/Hilux - 2023/Hilux-2023-1.png',
-                '/assets/img/Veículos/Hilux - 2023/Hilux-2023-2.png',
-                '/assets/img/Veículos/Hilux - 2023/Hilux-2023-3.png'
-            ];
-
-            mainImg.src = images[index];
-            thumbnails.forEach((thumb, i) => {
-                thumb.classList.toggle('active', i === index);
-            });
-        }
-
-        document.addEventListener('keydown', (e) => {
-            const currentIndex = Array.from(document.querySelectorAll('.thumbnail'))
-                                    .findIndex(thumb => thumb.classList.contains('active'));
-            
-            if(e.key === 'ArrowLeft' && currentIndex > 0) {
-                changeImage(currentIndex - 1);
-            }
-            if(e.key === 'ArrowRight' && currentIndex < 3) {
-                changeImage(currentIndex + 1);
-            }
-        });
-    </script>
+    <script src="/assets/script/Hilux - 2023.js"></script>
+    
 </body>
 </html>

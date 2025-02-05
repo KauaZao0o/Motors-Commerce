@@ -16,6 +16,7 @@
     width: 100%;
     top: 0;
     z-index: 1000;
+    height: 70px; /* Defina uma altura fixa para o header */
 }
 
 .logo img {
@@ -336,6 +337,30 @@
     .vehicle-price {
         font-size: 1.5rem;
     }
+
+    /* Ajustes para o Carrossel de Fotos em Mobile */
+    .vehicle-gallery {
+        position: static; /* Remove o posicionamento fixo */
+        max-width: 100%; /* Ocupa toda a largura da tela */
+    }
+    
+    .vehicle-page {
+        padding-top: 120px; /* Aumente o espaçamento superior */
+    }
+
+    .main-image {
+        height: 300px; /* Reduz a altura da imagem principal */
+    }
+
+    .thumbnail-grid {
+        grid-template-columns: repeat(2, 1fr); /* Exibe 2 miniaturas por linha */
+        gap: 0.5rem; /* Reduz o espaçamento entre as miniaturas */
+    }
+
+    .thumbnail {
+        height: 80px; /* Reduz a altura das miniaturas */
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -345,5 +370,21 @@
     
     .hero-content h1 {
         font-size: 2rem;
+    }
+
+    .main-image {
+        height: 250px; /* Reduz ainda mais a altura da imagem principal */
+    }
+
+    .thumbnail-grid {
+        grid-template-columns: repeat(2, 1fr); /* Mantém 2 miniaturas por linha */
+    }
+
+    .thumbnail {
+        height: 70px; /* Reduz a altura das miniaturas */
+    }
+
+    .vehicle-page {
+        padding-top: 100px; /* Ajuste para telas menores */
     }
 }
