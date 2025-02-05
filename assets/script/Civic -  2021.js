@@ -2,10 +2,10 @@ function changeImage(index) {
     const mainImg = document.getElementById('mainImage');
     const thumbnails = document.querySelectorAll('.thumbnail');
     const images = [
-        '/assets/img/Veículos/Civic - 2021/Civic-2021-0.png',
-        '/assets/img/Veículos/Civic - 2021/Civic-2021-1.png',
-        '/assets/img/Veículos/Civic - 2021/Civic-2021-2.png',
-        '/assets/img/Veículos/Civic - 2021/Civic-2021-3.png'
+        '/assets/img/Civic-2021-0.png',
+        '/assets/img/Civic-2021-1.png',
+        '/assets/img/Civic-2021-2.png',
+        '/assets/img/Civic-2021-3.png'
     ];
 
     mainImg.src = images[index];

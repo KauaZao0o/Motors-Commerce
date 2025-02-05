@@ -2,10 +2,10 @@ function changeImage(index) {
     const mainImg = document.getElementById('mainImage');
     const thumbnails = document.querySelectorAll('.thumbnail');
     const images = [
-        '/assets/img/Veículos/Compass - 2022/Compass-2022-0.png',
-        '/assets/img/Veículos/Compass - 2022/Compass-2022-1.png',
-        '/assets/img/Veículos/Compass - 2022/Compass-2022-2.png',
-        '/assets/img/Veículos/Compass - 2022/Compass-2022-3.png'
+        '/assets/img/Compass-2022-0.png',
+        '/assets/img/Compass-2022-1.png',
+        '/assets/img/Compass-2022-2.png',
+        '/assets/img/Compass-2022-3.png'
     ];
 
     mainImg.src = images[index];
