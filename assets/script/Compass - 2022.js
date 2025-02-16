@@ -2,10 +2,10 @@ function changeImage(index) {
     const mainImg = document.getElementById('mainImage');
     const thumbnails = document.querySelectorAll('.thumbnail');
     const images = [
-        '/img/Compass-2022-0.png',
-        '/img/Compass-2022-1.png',
-        '/img/Compass-2022-2.png',
-        '/img/Compass-2022-3.png'
+        '../img/Compass-2022/Compass-2022-0.png',
+        '../img/Compass-2022/Compass-2022-1.png',
+        '../img/Compass-2022/Compass-2022-2.png',
+        '../img/Compass-2022/Compass-2022-3.png'
     ];
 
     mainImg.src = images[index];
