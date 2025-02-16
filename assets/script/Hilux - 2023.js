@@ -2,10 +2,10 @@ function changeImage(index) {
     const mainImg = document.getElementById('mainImage');
     const thumbnails = document.querySelectorAll('.thumbnail');
     const images = [
-        '/img/Hilux-2023-0.png',
-        '/img/Hilux-2023-1.png',
-        '/img/Hilux-2023-2.png',
-        '/img/Hilux-2023-3.png'
+        '../img/Hilux-2023/Hilux-2023-0.png',
+        '../img/Hilux-2023/Hilux-2023-1.png',
+        '../img/Hilux-2023/Hilux-2023-2.png',
+        '../img/Hilux-2023/Hilux-2023-3.png'
     ];
 
     mainImg.src = images[index];
