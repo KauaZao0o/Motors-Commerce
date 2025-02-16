@@ -2,10 +2,10 @@ function changeImage(index) {
     const mainImg = document.getElementById('mainImage');
     const thumbnails = document.querySelectorAll('.thumbnail');
     const images = [
-        '../img/Hilux-2023/Hilux-2023-0.png',
-        '../img/Hilux-2023/Hilux-2023-1.png',
-        '../img/Hilux-2023/Hilux-2023-2.png',
-        '../img/Hilux-2023/Hilux-2023-3.png'
+        '../assets/img/Hilux-2023/Hilux-2023-0.png',
+        '../assets/img/Hilux-2023/Hilux-2023-1.png',
+        '../assets/img/Hilux-2023/Hilux-2023-2.png',
+        '../assets/img/Hilux-2023/Hilux-2023-3.png'
     ];
 
     mainImg.src = images[index];
@@ -13,6 +13,15 @@ function changeImage(index) {
         thumb.classList.toggle('active', i === index);
     });
 }
+
+// Adiciona evento de clique às miniaturas
+document.querySelectorAll('.thumbnail').forEach((thumb, index) => {
+    thumb.addEventListener('click', () => {
+        changeImage(index);
+    });
+});
+
+// Adiciona navegação por teclado
 
 document.addEventListener('keydown', (e) => {
     const currentIndex = Array.from(document.querySelectorAll('.thumbnail'))
