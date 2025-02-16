@@ -2,10 +2,10 @@ function changeImage(index) {
     const mainImg = document.getElementById('mainImage');
     const thumbnails = document.querySelectorAll('.thumbnail');
     const images = [
-        '../img/Civic-2021/Civic-2021-0.png',
-        '../img/Civic-2021/Civic-2021-1.png',
-        '../img/Civic-2021/Civic-2021-2.png',
-        '../img/Civic-2021/Civic-2021-3.png'
+        '../assets/img/Civic-2021/Civic-2021-0.png',
+        '../assets/img/Civic-2021/Civic-2021-1.png',
+        '../assets/img/Civic-2021/Civic-2021-2.png',
+        '../assets/img/Civic-2021/Civic-2021-3.png'
     ];
 
     mainImg.src = images[index];
@@ -13,6 +13,13 @@ function changeImage(index) {
         thumb.classList.toggle('active', i === index);
     });
 }
+
+// Adiciona evento de clique às miniaturas
+document.querySelectorAll('.thumbnail').forEach((thumb, index) => {
+    thumb.addEventListener('click', () => {
+        changeImage(index);
+    });
+});
 
 document.addEventListener('keydown', (e) => {
     const currentIndex = Array.from(document.querySelectorAll('.thumbnail'))
